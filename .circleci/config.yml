@@ -6,14 +6,12 @@ jobs:
     steps:
       - checkout
       - restore_cache:
-          key: dependency-cache-{{ checksum "package.json" }}
-      - run:
-          name: yarn-install
-          command: yarn
+          key: deps-{{ checksum "yarn.lock" }}
+      - run: yarn install --frozen-lockfile
       - save_cache:
-          key: dependency-cache-{{ checksum "package.json" }}
+          key: deps-{{ checksum "yarn.lock" }}
           paths:
-            - ./node_modules
+            - node_modules
       - run:
           name: build
           command: yarn tsc
