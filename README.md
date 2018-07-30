@@ -9,7 +9,7 @@ for a given change/build combination.
 ## Getting started
 
 ```
-yarn add @commitlint/travis-cli --dev
+yarn add commitlint-circle --dev
 ```
 
 ```yml
