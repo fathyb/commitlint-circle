@@ -7,6 +7,10 @@
   "author": "Fathy Boundjadj <fathy.boundjadj@gmail.com>",
   "description": "Lint all relevant commits for a change or PR on Circle CI",
   "license": "MIT",
+  "scripts": {
+    "build": "tsc",
+    "commitmsg": "commitlint -E GIT_PARAMS"
+  },
   "peerDependencies": {
     "@commitlint/cli": "^7.0.0"
   },
@@ -20,6 +24,12 @@
     "@commitlint/config-conventional": "^7.0.1",
     "@types/execa": "^0.9.0",
     "@types/node": "^10.5.4",
+    "husky": "^0.14.3",
     "typescript": "^2.9.2"
+  },
+  "commitlint": {
+    "extends": [
+      "@commitlint/config-conventional"
+    ]
   }
 }
