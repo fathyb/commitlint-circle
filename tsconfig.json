@@ -1,0 +1,15 @@
+{
+    "compilerOptions": {
+        "target": "es3",
+        "outDir": "build",
+        "esModuleInterop": true,
+        "sourceMap": true,
+        "declaration": true,
+        "strict": true,
+        "importHelpers": true,
+        "lib": ["es6"]
+    },
+    "include": [
+        "src/**/*.ts"
+    ]
+}
