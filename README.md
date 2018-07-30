@@ -16,3 +16,13 @@ yarn add commitlint-circle --dev
 # .circleci/config.yml
 - run: yarn commitlint-circle
 ```
+
+## Screenshot
+
+##### When building a PR
+
+![PR Lookup](./.github/pr-lookup.png)
+
+##### When building a change
+
+![SHA Lookup](./.github/sha-lookup.png)
