@@ -11,6 +11,10 @@
     "build",
     "src"
   ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/fathyb/commitlint-circle"
+  },
   "scripts": {
     "build": "tsc",
     "commitmsg": "commitlint -E GIT_PARAMS"
