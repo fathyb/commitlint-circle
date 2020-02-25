@@ -31,7 +31,9 @@ const matchGithub = <T>(url: string | undefined, prop: string) => {
 const getRangeFromPr = async () => {
     const {owner, repo, data: pull} = matchGithub(process.env['CIRCLE_PULL_REQUEST'], 'pull')
     const github = new Octokit()
-
+    if (process.env.GITHUB_TOKEN)
+        github.authenticate({ type: 'token', token: process.env.GITHUB_TOKEN || '' })
+    
     console.log('📡   Looking up PR #%s...', pull)
     const {data: {base, head}} = await github.pullRequests.get(
         {owner, repo, number: +pull}
